@@ -1,0 +1,16 @@
+development: &development
+      adapter: mysql2
+      encoding: utf8
+      database: blog
+      pool: 5
+      username: root
+      password:  root
+      host: localhost
+test:
+      <<: *development
+      database: blog
+
+production:
+      <<: *development
+      database: blog
+
